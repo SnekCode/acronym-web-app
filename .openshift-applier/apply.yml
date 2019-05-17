@@ -1,0 +1,10 @@
+---
+- name: Deploy Spring Boot
+  hosts: app
+  vars:
+    ci_cd_namespace: pat-ci-cd
+    dev_namespace: pat-dev
+    demo_namespace: pat-test
+  tasks:
+    - include_role:
+        name: openshift-applier/roles/openshift-applier
